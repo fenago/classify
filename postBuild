@@ -1,0 +1,11 @@
+jupyter nbextension install --py --user luxwidget
+jupyter nbextension enable --py --user luxwidget
+
+jupyter labextension install @jupyter-widgets/jupyterlab-manager --minimize=False
+jupyter labextension install luxwidget
+
+# Temporary Fix (#372)
+cd /srv/conda/envs/notebook/lib/python3.7/site-packages/luxwidget/
+mkdir labextension
+cd labextension
+wget https://raw.githubusercontent.com/lux-org/lux-widget/master/luxwidget/nbextension/package.json
