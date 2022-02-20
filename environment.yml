@@ -12,4 +12,5 @@ dependencies:
   - statsmodels
   - graphviz
   - pydotplus
-  - xgboost
+  - scrubadub
+  - lux-api
