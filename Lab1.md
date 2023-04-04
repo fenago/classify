@@ -2,6 +2,18 @@
 
 In this hands-on lab, you will learn how to analyze and preprocess a dataset using Python and various libraries. You will be able to understand the benefits of each step and visualize the data to gain insights. Finally, you will compare different machine learning algorithms to find the best one for your dataset.
 
+### Online Shoppers Intention Dataset
+In this lab, we will be using the Online Shoppers Intention dataset. The dataset contains information about user browsing behavior and the characteristics of user sessions from an e-commerce website. The objective of this analysis is to predict whether a user on the online site will make a purchase. This can help the e-commerce website owner make better decisions regarding marketing strategies and improving the user experience, ultimately increasing revenue.
+
+The dataset consists of various features, such as the duration of the visit, the type of operating system, and the month in which the visit occurred. The target variable in this dataset is 'Revenue' (notice that it can change to lowercase 'revenue' after you treat it), which is a boolean value indicating whether the user made a purchase or not during their session.
+
+To begin the analysis, we need to load the dataset. You can load the dataset from the provided URL using the following command:
+```python
+df = pd.read_csv('https://raw.githubusercontent.com/fenago/classify/main/data/online_shoppers_intention.csv')
+
+```
+Now that you have an understanding of the dataset and its objective, you can follow the steps in the hands-on lab to preprocess the data, visualize it, and compare different machine learning algorithms to find the best one for predicting whether a user will make a purchase on the online site.
+
 ### Step 1: Import your libraries
 
 Before starting any data analysis, you need to import the necessary libraries. This step imports the libraries required for this lab, such as numpy, pandas, matplotlib, seaborn, and scikit-learn.
@@ -20,7 +32,9 @@ import sklearn.metrics as metrics
 
 Load your dataset into a pandas dataframe. For this example, we will use a placeholder dataset, but you can replace it with your own data.
 ```python
-df = pd.read_csv('./data/<put your data here>')
+# df = pd.read_csv('./data/<put your data here>')
+df = pd.read_csv('https://raw.githubusercontent.com/fenago/classify/main/data/online_shoppers_intention.csv')
+
 ```
 
 ### Step 3: Run these commands 1 cell at a time
@@ -267,5 +281,14 @@ ax.set_xticklabels(names)
 pyplot.show()
 
 ```
+### Conclusion
+In this hands-on lab, you have learned how to analyze and preprocess the Online Shoppers Intention dataset using Python and various libraries. You have explored the data, cleaned it, visualized it, and compared different machine learning algorithms to find the best one for predicting whether a user will make a purchase on the online site.
 
-Congratulations!  You have developed several models from scratch!
+Now, you are encouraged to apply the same techniques and steps to a new dataset - the UCI Credit Card Default dataset. This dataset contains information about credit card clients and their payment behavior. The objective of this analysis is to predict whether a client will default on their credit card payment in the next month.
+
+The dataset consists of various features, such as demographics, payment history, and bill amounts. You can load the dataset from the provided URL using the following command:
+```python
+df = pd.read_csv('https://raw.githubusercontent.com/fenago/datasets/main/UCI_Credit_Card.csv')
+
+```
+To start working with this dataset, create a new Google Colab notebook, and follow the same steps as in this lab. Apply the knowledge you have gained from working with the Online Shoppers Intention dataset to preprocess, visualize, and compare different machine learning algorithms on the UCI Credit Card Default dataset. This exercise will help you further develop your skills and understanding of data analysis and machine learning techniques.
